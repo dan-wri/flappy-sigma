@@ -11,6 +11,9 @@ from pathlib import Path
 
 import pygame
 
+# PyInstaller unpacks bundled assets under sys._MEIPASS.
+ASSET_DIR = Path(getattr(sys, "_MEIPASS", Path(__file__).parent))
+
 # --- Config ---
 WIDTH, HEIGHT = 400, 600
 FPS = 60
@@ -21,14 +24,14 @@ PIPE_GAP = 160
 PIPE_SPEED = 3
 PIPE_INTERVAL_MS = 1500
 AVATAR_SIZE = (48, 48)
-DEFAULT_AVATAR = Path(__file__).parent / "sigma.png"
+DEFAULT_AVATAR = ASSET_DIR / "sigma.png"
 # Pilot image for the ship obstacle; falls back to the player's avatar.
-SHIP_PILOT = Path(__file__).parent / "enemy.png"
+SHIP_PILOT = ASSET_DIR / "enemy.png"
 SHIP_CHANCE = 0.30
 SHIP_SIZE = (96, 64)
 SHIP_PILOT_SIZE = 34
 SHIP_SPEED_Y = (2.0, 3.5)
-BIG_SHIP_PILOT = Path(__file__).parent / "enemy_2.jpg"
+BIG_SHIP_PILOT = ASSET_DIR / "enemy_2.jpg"
 # Chance that a spawned ship is the big variant.
 BIG_SHIP_CHANCE = 0.35
 BIG_SHIP_SCALE = 2
