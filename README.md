@@ -54,8 +54,8 @@ Put these files next to `game.py` to customise the game:
 | File | Used for | If it's missing |
 | --- | --- | --- |
 | `sigma.png` | Your avatar | A yellow circle is drawn instead |
-| `enemy.png` | The pilot in the small ships | Your avatar is used |
-| `enemy_2.jpg` | The pilot in the big ships | The small-ship pilot is used |
+| `enemy.png` | The pilot in the small ships | Graham is used |
+| `enemy_2.jpg` | The pilot in the big ships | Evil Verne is used |
 
 Square images work best. PNGs with transparent backgrounds look cleanest. The avatar is resized to 48×48, and pilots are cropped to a circle inside the cockpit.
 
